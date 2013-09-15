@@ -29,7 +29,7 @@ Libraries and header files for development with mpg123.
 %setup -q -n %name-%version
 
 %build
-%configure --with-cpu=generic_fpu --enable-shared --enable-static --disable-ltdl-install
+%configure --with-cpu=generic_fpu --enable-shared --disable-static --disable-ltdl-install
 make
 
 %install
@@ -58,7 +58,7 @@ ldconfig
 %defattr(644,root,root)
 %{_libdir}/pkgconfig/libmpg123.pc
 %{_includedir}/*.h
-%{_libdir}/libmpg123.a
+#%{_libdir}/libmpg123.a
 %{_libdir}/libmpg123.la
 %{_libdir}/libmpg123.so
 #%exclude %{_libdir}/mpg123/output_*.a
