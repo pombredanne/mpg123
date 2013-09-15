@@ -34,7 +34,7 @@ Libraries and header files for development with mpg123.
 %setup -q -n %name-%version
 
 %build
-%configure --with-cpu=x86_dither --enable-shared --enable-static --disable-ltdl-install
+%configure --with-cpu=generic_fpu --enable-shared --enable-static --disable-ltdl-install
 make
 
 %install
@@ -50,8 +50,8 @@ make
 %defattr(644,root,root)
 %doc %{_mandir}/*/mpg123.1.gz
 %{_libdir}/libmpg123.so.*
-%{_libdir}/mpg123/output_*.la
-%{_libdir}/mpg123/output_*.so
+#%{_libdir}/mpg123/output_*.la
+#%{_libdir}/mpg123/output_*.so
 
 %files devel
 %defattr(644,root,root)
@@ -60,7 +60,7 @@ make
 %{_libdir}/libmpg123.a
 %{_libdir}/libmpg123.la
 %{_libdir}/libmpg123.so
-%exclude %{_libdir}/mpg123/output_*.a
+#%exclude %{_libdir}/mpg123/output_*.a
 
 %changelog
 * Tue Jan  1 2008 Michael Ryzhykh <mclroy@gmail.com>
