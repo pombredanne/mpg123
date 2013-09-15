@@ -23,6 +23,7 @@ raw data to stdout and different sound systems depending on your platform.
 %package devel
 Summary:	Files needed for development with mpg123
 Group:		Development/Libraries
+Requires: %{name} = %{version}-%{release}
 
 %description devel
 Libraries and header files for development with mpg123.
