@@ -9,12 +9,7 @@ Release:	1
 URL:		http://www.mpg123.org/
 License:	GPL
 Group:		Applications/Multimedia
-Packager:	Michael Ryzhykh <mclroy@gmail.com>
 Source:		http://www.mpg123.org/download/mpg123-%{version}.tar.bz2
-BuildRoot:	%_tmppath/%name-%version
-Prefix: 	/usr
-# That is specific to fedora 4 already.
-#BuildPrereq:	libtool-ltdl-devel
 
 %description
 This is a console based decoder/player for mono/stereo mpeg audio files,
@@ -43,6 +38,12 @@ make
 
 %clean
 %{__rm} -rf %{buildroot}
+
+%post
+ldconfig
+
+%postun
+ldconfig
 
 %files
 %defattr(755,root,root)
