@@ -10,6 +10,8 @@ URL:		http://www.mpg123.org/
 License:	GPL
 Group:		Applications/Multimedia
 Source:		http://www.mpg123.org/download/mpg123-%{version}.tar.bz2
+BuildRequires: autoconf
+buildRequires: automake
 
 %description
 This is a console based decoder/player for mono/stereo mpeg audio files,
